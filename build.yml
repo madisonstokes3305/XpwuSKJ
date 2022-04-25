@@ -6,8 +6,7 @@ on:
 jobs:
   Build-Server-Jar:
     runs-on: windows-latest
-    steps:
-      - name: Checkout
+    steps
         uses: actions/checkout@v2
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -17,7 +16,7 @@ jobs:
       - name: Run Gradle
         run: .\gradlew.bat && .\gradlew jar
       - name: Upload build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-
         with:
           name: Grasscutter
           path: grasscutter.jar
